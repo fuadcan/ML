@@ -2,11 +2,18 @@
 install.packages("FactoMineR")
 install.packages("factoextra")
 install.packages("corrplot")
+install.packages("gplots")
+
 head(housetasks)
+
+library("FactoMineR")
+library("factoextra")
+library("corrplot")
+library("gplots")
 
 #### Baloon Plot for Housetasks data ####
 dat <- as.table(as.matrix(housetasks))
-library(gplots)
+
 balloonplot(t(dat), main ="housetasks", xlab ="", ylab="",
             label = FALSE, show.margins = FALSE)
 
